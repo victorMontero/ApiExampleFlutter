@@ -1,3 +1,4 @@
+import 'package:api_example/screens/tabs/home_screen.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:api_example/bloc/bottom_navbar_bloc.dart';
 import 'package:flutter/cupertino.dart';
@@ -40,7 +41,7 @@ class _MainScreenState extends State<MainScreen> {
           builder: (BuildContext context, AsyncSnapshot<NavBarItem> snapshot) {
             switch (snapshot.data) {
               case NavBarItem.HOME:
-                return testScreen();
+                return HomeScreen();
               case NavBarItem.SOURCES:
                 return testScreen();
               case NavBarItem.SEARCH:

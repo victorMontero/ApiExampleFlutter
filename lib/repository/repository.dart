@@ -27,12 +27,11 @@ class NewsRepository{
     }
   }
 
-  Future<ArticleResponse> getTopHeadLines() async {
+  Future<ArticleResponse> getTopHeadlines() async {
     var params = {
       'apikey': apiKey,
       'country': 'ca'
     };
-
     try{
       Response response = await _dio.get(getTopHeadlinesUrl, queryParameters: params);
       return ArticleResponse.fromJson(response.data);
